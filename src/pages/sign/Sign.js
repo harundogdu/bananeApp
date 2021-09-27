@@ -14,7 +14,7 @@ const initialValues = {
 };
 const Login = ({navigation}) => {
   /* state */
-  const [isLoginLoading, setIsLoginLoading] = useState(false);
+  const [isRegisterLoading, setIsRegisterLoading] = useState(false);
   const handleLogin = () => {
     navigation.goBack();
   };
@@ -30,16 +30,16 @@ const Login = ({navigation}) => {
       return;
     }
     try {
-      setIsLoginLoading(true);
+      setIsRegisterLoading(true);
       await auth().createUserWithEmailAndPassword(
         values.usermail,
         values.password,
       );
-      setIsLoginLoading(false);
+      setIsRegisterLoading(false);
       Alert.alert('Başarılı!', 'Kayıt Başarılı, Yönlendiriliyorsunuz!');
       navigation.navigate('LoginPage');
     } catch (err) {
-      setIsLoginLoading(false);
+      setIsRegisterLoading(false);
       Alert.alert('Hata!', authErrorCodeParser(err.code));
     }
   };
@@ -76,7 +76,7 @@ const Login = ({navigation}) => {
               <Button
                 handlePress={handleSubmit}
                 text="Kayıt Ol"
-                loading={isLoginLoading}
+                loading={isRegisterLoading}
               />
               <Button handlePress={handleLogin} text="Geri" theme="secondary" />
             </View>

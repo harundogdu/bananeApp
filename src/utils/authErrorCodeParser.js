@@ -8,6 +8,8 @@ export default function (errorCode) {
       return 'Kullanıcı Bulunamadı!';
     case 'auth/weak-password':
       return 'Zayıf parola!';
+    case 'auth/wrong-password':
+      return 'Hatalı email/şifre kombinasyonu!';
     default:
       return errorCode;
   }
