@@ -2,7 +2,14 @@ import React from 'react';
 import {View, TextInput} from 'react-native';
 import styles from './Input.style';
 import colors from '../../../styles/colors';
-const Input = ({placeholder, value, onType, onBlur}) => {
+const Input = ({
+  placeholder,
+  value,
+  onType,
+  onBlur,
+  isSecure = false,
+  keyboardType = 'default',
+}) => {
   return (
     <View style={styles.container}>
       <TextInput
@@ -12,6 +19,9 @@ const Input = ({placeholder, value, onType, onBlur}) => {
         placeholderTextColor={colors.primary}
         onChangeText={onType}
         onBlur={onBlur}
+        secureTextEntry={isSecure}
+        keyboardType={keyboardType}
+        autoCapitalize="none"
       />
     </View>
   );

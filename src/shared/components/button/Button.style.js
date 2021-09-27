@@ -10,6 +10,13 @@ const base_style = StyleSheet.create({
     fontSize: 18,
     textAlign: 'center',
   },
+  loading: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  indicator: {
+    marginLeft: 5,
+  },
 });
 
 export default {

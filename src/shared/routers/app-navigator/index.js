@@ -1,9 +1,10 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+/* pages */
 import Login from '../../../pages/login';
 import Sign from '../../../pages/sign';
-
+/* stack */
 const Stack = createNativeStackNavigator();
 
 export default () => {
