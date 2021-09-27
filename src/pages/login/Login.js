@@ -25,6 +25,7 @@ const Login = ({navigation}) => {
       setIsLoginLoading(true);
       await auth().signInWithEmailAndPassword(values.usermail, values.password);
       setIsLoginLoading(false);
+      navigation.navigate('HomePage');
     } catch (err) {
       setIsLoginLoading(false);
       Alert.alert('Hata!', authErrorCodeParser(err.code));

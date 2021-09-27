@@ -3,7 +3,7 @@ import colors from '../../../styles/colors';
 const base_style = StyleSheet.create({
   container: {
     padding: 10,
-    borderRadius: 5,
+    borderRadius: 6,
     marginTop: 15,
   },
   text: {
