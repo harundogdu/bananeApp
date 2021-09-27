@@ -1,11 +1,10 @@
-import {Dimensions, StyleSheet} from 'react-native';
-
+import {StyleSheet} from 'react-native';
+import colors from '../../../styles/colors';
 const base_style = StyleSheet.create({
   container: {
-    margin: 10,
     padding: 10,
-    width: Dimensions.get('screen').width / 2.6,
-    borderRadius: 10,
+    borderRadius: 5,
+    marginTop: 15,
   },
   text: {
     fontSize: 18,
@@ -18,25 +17,25 @@ export default {
     ...base_style,
     container: {
       ...base_style.container,
-      backgroundColor: '#852747',
+      backgroundColor: colors.primary,
       borderWidth: 1,
-      borderColor: '#852747',
+      borderColor: colors.primary,
     },
     text: {
       ...base_style.text,
-      color: '#fff',
+      color: colors.white,
     },
   }),
   secondary: StyleSheet.create({
     ...base_style,
     container: {
       ...base_style.container,
-      borderColor: '#852747',
+      borderColor: colors.primary,
       borderWidth: 1,
     },
     text: {
       ...base_style.text,
-      color: '#852747',
+      color: colors.primary,
     },
   }),
 };

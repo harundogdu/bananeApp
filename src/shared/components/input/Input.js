@@ -1,13 +1,17 @@
 import React from 'react';
 import {View, TextInput} from 'react-native';
 import styles from './Input.style';
-const Input = ({placeholder}) => {
+import colors from '../../../styles/colors';
+const Input = ({placeholder, value, onType, onBlur}) => {
   return (
     <View style={styles.container}>
       <TextInput
+        value={value}
         style={styles.input}
         placeholder={placeholder}
-        placeholderTextColor="#852747"
+        placeholderTextColor={colors.primary}
+        onChangeText={onType}
+        onBlur={onBlur}
       />
     </View>
   );
