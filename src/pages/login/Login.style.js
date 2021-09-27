@@ -1,13 +1,19 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5C6A5',
+    backgroundColor: '#FEF1E6',
     justifyContent: 'center',
+    alignItems: 'center',
   },
   input_container: {
-    alignItems: 'center',
+    width: Dimensions.get('screen').width / 1.2,
+  },
+  button_container: {
+    flexDirection: 'row',
+    width: Dimensions.get('screen').width / 1.2,
+    justifyContent: 'center',
   },
   title: {
     textAlign: 'center',

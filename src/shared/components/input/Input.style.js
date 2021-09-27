@@ -1,9 +1,8 @@
-import {Dimensions, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
     marginVertical: 5,
-    width: Dimensions.get('screen').width - 100,
   },
   input: {
     borderWidth: 1,
